@@ -47,51 +47,141 @@
         nav a:hover, nav a.active {
             color: var(--accent-color);
         }
-        .container {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-        .intro-box {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 10%;
+            text-align: center;
             margin-bottom: 3rem;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .page-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #e2e8f0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto 4rem auto;
+            padding: 0 2rem;
         }
         h2 {
             color: var(--primary-color);
-            font-size: 1.6rem;
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-color);
-            margin-top: 2.5rem;
-        }
-        .skill-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skill-list li {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+            display: inline-block;
             background-color: white;
-            padding: 1.2rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-            margin-bottom: 1rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             border: 1px solid var(--border-color);
         }
-        .skill-list strong {
-            color: var(--primary-color);
-            font-size: 1.1rem;
+        /* Grid de Tarjetas de Habilidades */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
+        .skill-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+        }
+        .skill-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .skill-card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        /* Logo del canal en la tarjeta */
+        .channel-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+        }
+        /* Lista de cursos */
         .course-list {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            margin-top: 1rem;
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1rem;
         }
         .course-list li {
-            margin-bottom: 0.6rem;
+            background-color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            font-size: 0.95rem;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+        }
+        /* Sección personal con imagen */
+        .personal-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+        .personal-text {
+            flex: 1;
+        }
+        .personal-text p {
+            font-size: 1.05rem;
             color: #4a5568;
+            line-height: 1.8;
+            margin: 0;
+        }
+        .personal-image-container {
+            flex: 1;
+            max-width: 400px;
+        }
+        .personal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .personal-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -108,44 +198,76 @@
         </nav>
     </header>
 
+    <div class="page-header">
+        <h1>Habilidades y Formación</h1>
+        <p>Un perfil analítico requiere tanto de precisión técnica para interpretar los datos como de habilidades humanas para comunicarlos.</p>
+    </div>
+
     <div class="container">
         
-        <div class="intro-box">
-            <p style="margin: 0; font-size: 1.1rem;">Un perfil analítico requiere tanto de precisión técnica para interpretar los datos como de habilidades humanas para comunicarlos. Esta sección refleja mi caja de herramientas: desde el software especializado hasta la capacidad de persuasión, el liderazgo de equipos y la formación constante.</p>
+        <h2>Competencias técnicas y analíticas</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3 class="skill-title">Análisis de datos y estadística</h3>
+                <p>manejo avanzado de Excel y SPSS para la gestión de bases de datos, cruce de variables y análisis cuantitativo. Actualmente ampliando capacidades mediante el aprendizaje de PowerBI para la visualización interactiva de datos.</p>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-title">Sistemas de información geográfica</h3>
+                <p>dominio de QGIS aplicado al análisis espacial, cartografía electoral y vinculación de indicadores sociodemográficos territoriales para la estrategia política.</p>
+            </div>
+            <div class="skill-card" style="border-top-color: #e53e3e;"> <!-- Color rojo para destacar YouTube -->
+                <h3 class="skill-title">
+                    Comunicación audiovisual
+                    <!-- Aquí subes el logo de tu canal como logo-canal.png -->
+                    <img src="logo-canal.png" alt="Canal de YouTube" class="channel-logo" onerror="this.style.display='none';">
+                </h3>
+                <p>edición de vídeo profesional con Wondershare Filmora. Experiencia real en la creación, gestión y posicionamiento de un canal de YouTube sobre historia y política que alcanzó la monetización y superó las 50.000 visualizaciones por vídeo.</p>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-title">Inteligencia artificial aplicada</h3>
+                <p>uso práctico de herramientas de IA generativa para la optimización de procesos, redacción de prompts avanzados y generación de código web.</p>
+            </div>
         </div>
 
-        <h2>Competencias técnicas y analíticas</h2>
-        <ul class="skill-list">
-            <li><strong>Análisis de datos y estadística:</strong> manejo avanzado de Excel y SPSS para la gestión de bases de datos, cruce de variables y análisis cuantitativo. Actualmente ampliando capacidades mediante el aprendizaje de PowerBI para la visualización interactiva de datos.</li>
-            <li><strong>Sistemas de información geográfica (SIG):</strong> dominio de QGIS aplicado al análisis espacial, cartografía electoral y vinculación de indicadores sociodemográficos territoriales.</li>
-            <li><strong>Comunicación audiovisual y divulgación:</strong> edición de vídeo profesional con Wondershare Filmora. Experiencia real en la creación, gestión y posicionamiento de un canal de YouTube sobre historia y política que alcanzó la monetización y superó las 50.000 visualizaciones por vídeo (proyecto actualmente pausado).</li>
-            <li><strong>Inteligencia artificial aplicada:</strong> uso práctico de herramientas de IA generativa para la optimización de procesos, redacción de prompts avanzados y generación de código web.</li>
-        </ul>
-
-        <h2>Competencias lingüísticas</h2>
-        <ul class="skill-list">
-            <li><strong>Inglés avanzado (C1 Trinity):</strong> capacidad plena para el consumo de investigación académica internacional, lectura de documentación técnica de software y comunicación fluida en entornos profesionales.</li>
-        </ul>
-
-        <h2>Liderazgo y habilidades interpersonales</h2>
-        <ul class="skill-list">
-            <li><strong>Oratoria, comunicación persuasiva y adaptación del mensaje:</strong> capacidad contrastada en las aulas, campañas políticas y captación a pie de calle (ONG) para traducir conceptos técnicos o sociopolíticos complejos en mensajes claros, directos y adaptados a cualquier audiencia.</li>
-            <li><strong>Capacidad de liderazgo y motivación de equipos:</strong> habilidades estratégicas de dirección y trabajo bajo presión, forjadas tanto en la coordinación educativa como a lo largo de los años en mi faceta como entrenador y coordinador de fútbol sala base.</li>
-            <li><strong>Negociación, mediación y resolución de conflictos:</strong> experiencia real gestionando grupos humanos, interviniendo proactivamente en situaciones de tensión y alcanzando consensos en el ámbito docente y deportivo.</li>
-        </ul>
+        <h2>Competencias lingüísticas e interpersonales</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3 class="skill-title">Inglés avanzado (C1 Trinity)</h3>
+                <p>capacidad plena para el consumo de investigación académica internacional, lectura de documentación técnica de software y comunicación fluida en entornos profesionales.</p>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-title">Oratoria y persuasión</h3>
+                <p>capacidad contrastada en las aulas, campañas políticas y captación a pie de calle (ONG) para traducir conceptos sociopolíticos complejos en mensajes claros y directos.</p>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-title">Liderazgo de equipos</h3>
+                <p>habilidades estratégicas de dirección y trabajo bajo presión, forjadas tanto en la coordinación educativa como en mi faceta de entrenador de fútbol sala base.</p>
+            </div>
+            <div class="skill-card">
+                <h3 class="skill-title">Negociación y mediación</h3>
+                <p>experiencia real gestionando grupos humanos, interviniendo proactivamente en situaciones de tensión y alcanzando consensos en el ámbito docente y deportivo.</p>
+            </div>
+        </div>
 
         <h2>Formación continua y especialización</h2>
-        <p style="color: #4a5568; margin-bottom: 1rem;">Selección de certificaciones y cursos orientados a la estrategia, la comunicación y los asuntos públicos:</p>
         <ul class="course-list">
             <li>Acción política: contexto y estrategia (Colegio de Ciencias Políticas y Sociología).</li>
-            <li>Gestionar la influencia ajena y los asuntos públicos en la práctica cotidiana (Colegio de Ciencias Políticas y Sociología).</li>
+            <li>Gestionar la influencia ajena y los asuntos públicos en la práctica cotidiana.</li>
             <li>Métodos de conversación para generar influencia en el otro (UNED).</li>
             <li>Creación y divulgación de podcasts (Universidad de Burgos).</li>
-            <li>Técnicas de comunicación (CARM).</li>
+            <li>Técnicas de comunicación y atención institucional (CARM).</li>
         </ul>
 
         <h2>Más allá de lo profesional</h2>
-        <p style="color: #4a5568; line-height: 1.8;">La capacidad de análisis también se nutre de la desconexión y el entorno personal. Encuentro mi equilibrio a través del deporte (especialmente ligado a mi pasión por el fútbol sala), el contacto con la naturaleza y la lectura. Por encima de todo, valoro profundamente el tiempo de calidad compartido con mi familia y mis mascotas, mi verdadero ancla en el día a día.</p>
+        <div class="personal-section">
+            <div class="personal-text">
+                <p>La capacidad de análisis también se nutre de la desconexión y el entorno personal. Encuentro mi equilibrio a través del <strong>deporte</strong> (especialmente ligado a mi pasión por el fútbol sala), el contacto con la <strong>naturaleza</strong> y la <strong>lectura</strong>. Por encima de todo, valoro profundamente el tiempo de calidad compartido con mi <strong>familia y mis mascotas</strong>, mi verdadero ancla en el día a día.</p>
+            </div>
+            <div class="personal-image-container">
+                <!-- Aquí subes tu foto personal llamándola aficiones.jpg -->
+                <img src="aficiones.jpg" alt="Ignacio en su tiempo libre" class="personal-image" onerror="this.src='https://images.unsplash.com/photo-1511886929837-354d827aae26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';">
+            </div>
+        </div>
 
     </div>
 
