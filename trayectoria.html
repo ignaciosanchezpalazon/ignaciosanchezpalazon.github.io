@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayectoria | Ignacio Sánchez</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #2b6cb0;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            padding: 1.5rem 10%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .intro-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            margin-top: 2.5rem;
+        }
+        .timeline-item {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        .timeline-date {
+            font-size: 0.95rem;
+            color: #718096;
+            font-weight: 600;
+        }
+        .timeline-subtitle {
+            font-size: 1.05rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .doc-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            margin-right: 1rem;
+            padding: 0.4rem 0.8rem;
+            background-color: #edf2f7;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .doc-link:hover {
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Ignacio Sánchez</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="trayectoria.html" class="active">Trayectoria</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-box">
+            <p style="margin: 0; font-size: 1.1rem;">Me considero un <strong>estudiante de vocación</strong>. Aprender, superarme y crecer académica y personalmente es una de mis grandes prioridades. Mi trayectoria es el resultado de ir sumando capas de conocimiento complementarias: desde la base humanista de la Historia, pasando por la gestión de grupos en la docencia, hasta llegar a la especialización técnica en el análisis de datos políticos y el estudio de la inteligencia artificial.</p>
+        </div>
+
+        <h2>Formación en el Próximo Curso Académico (2026-2027)</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Doctorado</h3>
+            </div>
+            <p><strong>Línea de investigación:</strong> Comunicación Política, Campañas y Elecciones. Especialización en el impacto y uso de la Inteligencia Artificial (IA) por parte de los partidos políticos, abarcando áreas de comunicación estratégica, creación de spots electorales y nuevas formas de gobernanza.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Máster de Métodos Avanzados de Investigación e Innovación en el Análisis Social</h3>
+            </div>
+            <p>Profundización técnica y metodológica para elevar el rigor y la precisión en la investigación sociológica y el análisis de datos complejos.</p>
+        </div>
+
+        <h2>Formación Académica e Investigación</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Máster en Análisis Político Aplicado</h3>
+                <span class="timeline-date">Universidad de Murcia (UMU)</span>
+            </div>
+            <p>Rendimiento académico sobresaliente a nivel global. Obtención de la distinción de <strong>Matrícula de Honor en 4 disciplinas</strong>: <em>Construcción y Transmisión del Mensaje Político</em>, <em>Diseño y Planificación de las Campañas Políticas y Electorales</em>, <em>Liderazgo y Emociones</em>, y en el <strong>Trabajo Fin de Máster</strong>, centrado en el análisis de la quiebra democrática de la II República mediante técnicas de análisis del discurso y de contenido.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Grado en Ciencias Políticas y Gestión Pública</h3>
+                <span class="timeline-date">Universidad de Burgos (UBU)</span>
+            </div>
+            <p>Comprensión profunda de las dinámicas sociales y el funcionamiento de las instituciones, superando con la calificación de Sobresaliente el 25% de las asignaturas.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Grado en Historia</h3>
+                <span class="timeline-date">Universidad de Murcia (UMU)</span>
+            </div>
+            <p>Mi primera carrera. La base humanista fundamental que me aporta el contexto histórico necesario para analizar los fenómenos políticos actuales a largo plazo.</p>
+        </div>
+
+        <h2>Experiencia Política, Estratégica y de Comunicación</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Análisis Sociodemográfico y Planificación de Campaña</h3>
+                <span class="timeline-date">Prácticas del Máster</span>
+            </div>
+            <div class="timeline-subtitle">Partido político de ámbito regional</div>
+            <p>Desarrollo de análisis cartográficos y sociodemográficos para la toma de decisiones estratégicas. Participación directa en la elaboración del calendario y la estrategia de precampaña y campaña electoral para las elecciones autonómicas y municipales de 2027.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Dirección de Campaña Electoral Municipal</h3>
+                <span class="timeline-date">2023</span>
+            </div>
+            <div class="timeline-subtitle">Elecciones Municipales en Ceutí</div>
+            <p>Diseño y liderazgo de la estrategia electoral para una formación política municipal minoritaria. Gestión del mensaje y movilización, logrando alcanzar y superar con creces el objetivo de obtener representación institucional, a pesar de la complejidad del escenario.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Comunicación Departamental y Gestión de Contenidos</h3>
+                <span class="timeline-date">Universidad de Murcia</span>
+            </div>
+            <div class="timeline-subtitle">Alumno Interno - Dpto. Ciencia Política, Antropología Social y Hacienda Pública</div>
+            <p>Dirección de redes sociales y creación de contenidos en vídeo para el departamento, logrando batir el récord histórico de preinscripciones del máster para el siguiente curso.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Captador de Socios y Transmisión de Mensaje</h3>
+                <span class="timeline-date">2017</span>
+            </div>
+            <div class="timeline-subtitle">Médicos Sin Fronteras</div>
+            <p>Trabajo directo en calle enfocado en la persuasión, creación de impacto y transmisión eficaz del mensaje humanitario de la organización al público general.</p>
+        </div>
+
+        <h2>Experiencia Educativa y Gestión de Equipos</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Docente y Coordinador de Secundaria</h3>
+                <span class="timeline-date">2021 - Actualidad</span>
+            </div>
+            <div class="timeline-subtitle">Cooperativa de Enseñanza Luis Vives (Nonduermas)</div>
+            <p>Además de la docencia en Geografía e Historia, ejerzo como coordinador del profesorado de secundaria, organizando proyectos educativos transversales e interviniendo en la mediación y resolución de conflictos.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Entrenador y Coordinador de Fútbol Sala</h3>
+            </div>
+            <div class="timeline-subtitle">Clubes de trayectoria regional como el CD Murcia</div>
+            <p>Consecución de grandes logros deportivos a nivel regional. Además de la dirección táctica en pista, asunción de responsabilidades organizativas en la gestión y coordinación de las escuelas de fútbol sala base.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Experiencia Docente Previa e Institucional</h3>
+                <span class="timeline-date">2017 - 2020</span>
+            </div>
+            <p>Profesor de Ciencias Sociales en el Colegio El Planet (Altea, 2019-2020) y realización del prácticum en el IES Felipe de Borbón (Ceutí).</p>
+            <!-- Aquí están los enlaces a los PDFs -->
+            <a href="carta-planet.pdf" target="_blank" class="doc-link">Ver Carta Colegio El Planet</a>
+            <a href="carta-felipe-borbon.pdf" target="_blank" class="doc-link">Ver Carta IES Felipe de Borbón</a>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3 class="timeline-title">Editor en Revista Individualia</h3>
+                <span class="timeline-date">2014 - Actualidad</span>
+            </div>
+            <p>Proyecto personal enfocado en la edición y redacción de contenidos de interés cultural.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
